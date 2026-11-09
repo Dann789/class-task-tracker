@@ -77,12 +77,12 @@ docker compose down
 Pastikan layanan PostgreSQL sedang berjalan dan database `tasktracker_db` sudah dibuat. Konfigurasikan file `backend/.env` sesuai kredensial database Anda:
 
 ```env
-PORT=3000
+PORT=number_port
 DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=tasktracker_db
+DB_PORT=db_port
+DB_NAME=db_name
 DB_USER=postgres
-DB_PASSWORD=123456
+DB_PASSWORD=db_password
 JWT_SECRET=class_task_tracker_secret_key_jwt_2026
 JWT_EXPIRES_IN=7d
 ```
@@ -152,3 +152,7 @@ node src/test-api.js
 - `PUT /api/tasks/:id` - **(Guru)** Memperbarui tugas.
 - `DELETE /api/tasks/:id` - **(Guru)** Menghapus tugas.
 - `PATCH /api/tasks/:id/toggle-status` - **(Siswa)** Menandai tugas selesai / belum selesai.
+
+## Jika masih ada waktu lebih
+- Lebih merapikan tampilan web untuk semua role agar terlihat lebih clean
+- Menambah beberapa halaman baru seperti dashboard dan daftar siswa setiap kelas
