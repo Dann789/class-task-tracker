@@ -79,7 +79,8 @@ npm run db:init
 cd backend
 npm run dev
 ```
-Backend berjalan di: `http://localhost:3000`
+Backend berjalan di: `http://localhost:3000`  
+Dokumentasi interaktif (Swagger UI): `http://localhost:3000/api-docs`
 
 ### 3. Menjalankan Frontend
 
