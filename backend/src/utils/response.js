@@ -1,6 +1,3 @@
-/**
- * Standard Success Response Helper
- */
 function successResponse(res, message, data = null, statusCode = 200, pagination = null) {
   const payload = {
     success: true,
@@ -18,9 +15,6 @@ function successResponse(res, message, data = null, statusCode = 200, pagination
   return res.status(statusCode).json(payload);
 }
 
-/**
- * Standard Error Response Helper
- */
 function errorResponse(res, message, statusCode = 500, errors = null) {
   const payload = {
     success: false,

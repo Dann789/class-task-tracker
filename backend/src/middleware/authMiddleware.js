@@ -18,7 +18,6 @@ async function authenticate(req, res, next) {
 
     const decoded = jwt.verify(token, JWT_SECRET);
 
-    // Ambil user dari database untuk memastikan akun masih valid
     const result = await pool.query(
       "SELECT id, name, email, role, created_at FROM users WHERE id = $1",
       [decoded.id]
