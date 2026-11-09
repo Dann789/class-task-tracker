@@ -52,7 +52,27 @@ Semua akun seeder menggunakan kata sandi: `password123`
 
 ## 🚀 Panduan Menjalankan Proyek
 
-### 1. Inisialisasi Basis Data (PostgreSQL)
+### Opsi A: Menjalankan Menggunakan Docker (Rekomendasi Cepat)
+
+Jika Anda memiliki Docker terpasang, seluruh stack (PostgreSQL + skema auto-seeder, Backend Express, dan Frontend Nginx) dapat dijalankan dengan satu perintah:
+
+```bash
+docker compose up --build -d
+```
+- **Frontend Web:** `http://localhost:5173`
+- **Backend API:** `http://localhost:3000`
+- **Swagger UI:** `http://localhost:3000/api-docs`
+
+Untuk menghentikan:
+```bash
+docker compose down
+```
+
+---
+
+### Opsi B: Menjalankan Secara Manual (Lokal)
+
+#### 1. Inisialisasi Basis Data (PostgreSQL)
 
 Pastikan layanan PostgreSQL sedang berjalan dan database `tasktracker_db` sudah dibuat. Konfigurasikan file `backend/.env` sesuai kredensial database Anda:
 
